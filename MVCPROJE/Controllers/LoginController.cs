@@ -11,7 +11,6 @@ using System.Web.Security;
 
 namespace MVCPROJE.Controllers
 {
-    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login

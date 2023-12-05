@@ -11,7 +11,7 @@ using PagedList;
 using PagedList.Mvc;
 namespace MVCPROJE.Controllers
 {
-    [AllowAnonymous]
+   
     public class WriterPanelController : Controller
     {
         // GET: WriterProfile

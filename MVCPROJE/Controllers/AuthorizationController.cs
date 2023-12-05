@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace MVCPROJE.Controllers
 {
-    [AllowAnonymous]
+  
     public class AuthorizationController : Controller
     {
         // GET: Authorization

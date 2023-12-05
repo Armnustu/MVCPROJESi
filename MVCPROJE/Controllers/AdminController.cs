@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace MVCPROJE.Controllers
 {
-    [AllowAnonymous]
+   
     public class AdminController : Controller
     {
         // GET: Admin
