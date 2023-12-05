@@ -13,6 +13,7 @@ using System.Web.Mvc;
 
 namespace MVCPROJE.Controllers
 {
+    [AllowAnonymous]
     public class CategoryController : Controller
     {
         // GET: Category
@@ -24,7 +25,7 @@ namespace MVCPROJE.Controllers
             if (!string.IsNullOrEmpty(categoryname))
             {
                  categoryvalues = (from c in categoryManager.GetAllBL()
-                                      select c).Where(x => x.CategoryName==categoryname).ToList();
+                                      select c).Where(x => x.CategoryName.ToLower().Contains(categoryname)).ToList();
 
             }
 

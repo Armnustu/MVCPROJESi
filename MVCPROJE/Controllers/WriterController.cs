@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace MVCPROJE.Controllers
 {
+    [AllowAnonymous]
     public class WriterController : Controller
     {
         // GET: Writer

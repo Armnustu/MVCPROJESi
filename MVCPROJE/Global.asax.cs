@@ -11,7 +11,7 @@ namespace MVCPROJE
     {
         protected void Application_Start()
         {
-            GlobalFilters.Filters.Add(new AuthorizeAttribute());    
+            //GlobalFilters.Filters.Add(new AuthorizeAttribute());    
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

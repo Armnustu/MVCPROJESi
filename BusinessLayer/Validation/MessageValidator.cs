@@ -13,7 +13,7 @@ namespace BusinessLayer.Validation
         public MessageValidator()
         {
 
-            RuleFor(x => x.ReceiverMail).NotEmpty().WithMessage("Kate adını giriniz");
+            RuleFor(x => x.ReceiverMail).NotEmpty().WithMessage("Mail Giriniz");
             RuleFor(x => x.Subject).NotEmpty().WithMessage("Konu Açıklamasını boş geçemezdsiniz");
             RuleFor(x => x.Subject).MinimumLength(3).WithMessage("3 Karater Fazla giriş Yapmayınız");
             RuleFor(x => x.MessageContent).NotEmpty().WithMessage("Konuyu Boş Geçemezsiniz");

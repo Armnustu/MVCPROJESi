@@ -11,6 +11,7 @@ using PagedList;
 using PagedList.Mvc;
 namespace MVCPROJE.Controllers
 {
+    [AllowAnonymous]
     public class WriterPanelController : Controller
     {
         // GET: WriterProfile
@@ -28,10 +29,7 @@ namespace MVCPROJE.Controllers
 
         [HttpGet]
         public ActionResult WriterHeadinAdding()
-        {
-            //int id = Convert.ToInt32(Request.QueryString["id"].ToString());
-            //var item =headingManager.GetListWriter(id);
-            
+        {            
             return View();
         
         }
@@ -174,7 +172,6 @@ namespace MVCPROJE.Controllers
         {
             heading.HeadingStatus = true;
             headingManager.HeadingUpdate(heading);
-
             return RedirectToAction("Index");
         }
 
