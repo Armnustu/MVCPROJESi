@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace MVCPROJE.Controllers
 {
-   
+    
     public class AdminController : Controller
     {
         // GET: Admin
@@ -21,7 +21,7 @@ namespace MVCPROJE.Controllers
 
 
 
-        [Authorize(Roles="Admin")]
+        [Authorize(Roles ="Admin")]
         public ActionResult Index()
         {
             var item=categoriManager.GetAllBL();
@@ -62,13 +62,7 @@ namespace MVCPROJE.Controllers
 
 
         }
-
-        //[HttpGet]
-        //public ActionResult DeleteCategory()
-        //{
-        //    return View();
-
-        //}
+      
         //[HttpPost]
        public ActionResult DeleteCategory(int id)
         {

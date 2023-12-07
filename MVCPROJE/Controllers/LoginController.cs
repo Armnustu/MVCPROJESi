@@ -11,11 +11,13 @@ using System.Web.Security;
 
 namespace MVCPROJE.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
         Context context = new Context();
         [HttpGet]
+
         public ActionResult Index()
         {
             return View();
@@ -30,7 +32,6 @@ namespace MVCPROJE.Controllers
             {
                 FormsAuthentication.SetAuthCookie(user.AdminName,false);
                 Session["AdminName"] = user.AdminName;
-               
                 return RedirectToAction("Index", "Admin");
             }
             if (user != null && user.AdminRole == "Writer")

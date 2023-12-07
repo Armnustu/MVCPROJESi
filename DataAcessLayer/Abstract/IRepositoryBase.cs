@@ -18,11 +18,6 @@ namespace DataAcessLayer.Abstract
 
         Tentity Get(Expression<Func<Tentity, bool>> filter);
         Tentity GetByID(int id);
-   
-
-
-
-
 
     }
 }

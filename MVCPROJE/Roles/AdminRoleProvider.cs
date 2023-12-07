@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+
 namespace MVCPROJE.Roles
 {
     public class AdminRoleProvider : RoleProvider
@@ -38,7 +39,7 @@ namespace MVCPROJE.Roles
         public override string[] GetRolesForUser(string username)
         {
             Context context = new Context();
-            var user = context.Admins.FirstOrDefault(x=>x.AdminName==username);
+            var user = context.Admins.Where(x => x.AdminName == username).FirstOrDefault();
             return new string[] { user.AdminRole };
         }
 
